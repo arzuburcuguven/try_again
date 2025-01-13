@@ -1,8 +1,8 @@
 import matplotlib.pyplot as plt
 import torch
 import typer
-from mnist.data import MyDataset
-from mnist.model import MyAwesomeModel
+from .data import MyDataset
+from .model import MyAwesomeModel
 
 DEVICE = torch.device("cuda" if torch.cuda.is_available() else "mps" if torch.backends.mps.is_available() else "cpu")
 
@@ -45,7 +45,7 @@ def train(lr: float = 1e-3, batch_size: int = 32, epochs: int = 10) -> None:
     print("Training complete")
     torch.save(
         model.state_dict(),
-        "/Users/argy/workspace/M6/models/model.pth",
+        "/Users/argy/workspace/try_again/models/model.pth",
     )
     fig, axs = plt.subplots(1, 2, figsize=(15, 5))
     axs[0].plot(statistics["train_loss"])
@@ -53,7 +53,7 @@ def train(lr: float = 1e-3, batch_size: int = 32, epochs: int = 10) -> None:
     axs[1].plot(statistics["train_accuracy"])
     axs[1].set_title("Train accuracy")
     fig.savefig(
-        "/Users/argy/workspace/M6/reports/figures/training_statistics.png"
+        "/Users/argy/workspace/try_again/reports/figures/training_statistics.png"
     )
 
 

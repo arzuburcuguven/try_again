@@ -2,7 +2,7 @@ from pathlib import Path
 import torch
 import typer
 from torch.utils.data import Dataset
-from mnist import _PATH_DATA_RAW, _PATH_DATA_PROCESSED
+from . import _PATH_DATA_RAW, _PATH_DATA_PROCESSED
 
 
 def normalizer(images: torch.Tensor) -> torch.Tensor:

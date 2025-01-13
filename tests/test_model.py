@@ -1,5 +1,5 @@
 import torch
-from mnist.model import MyAwesomeModel
+from src.mnist.model import MyAwesomeModel
 
 
 def test_my_model():

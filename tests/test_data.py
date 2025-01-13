@@ -1,6 +1,6 @@
 from torch.utils.data import Dataset
 
-from mnist.data import MyDataset
+from src.mnist.data import MyDataset
 from tests import _PATH_DATA_RAW, _PATH_DATA_PROCESSED
 import torch
 
