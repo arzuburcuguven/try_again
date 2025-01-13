@@ -57,7 +57,6 @@ class MyDataset(Dataset):
 
         return train_dataset, test_dataset
 
-
 def preprocess(raw_data_path: Path = _PATH_DATA_RAW, processed_dir: Path = _PATH_DATA_PROCESSED) -> None:
     print("Preprocessing data...")
     dataset = MyDataset(raw_data_path, processed_dir)
