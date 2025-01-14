@@ -177,4 +177,4 @@ cython_debug/
 #.idea/
 
 # Data
-/data
+/google-cloud-sdk
